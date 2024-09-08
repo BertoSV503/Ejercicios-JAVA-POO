@@ -1,0 +1,9 @@
+Enfoque:
+
+- Responsabilidad Única (SRP): Las clases tienen responsabilidades específicas: Circulo para la lógica de cálculo, Consola para la 
+entrada de datos, y PruebaCirculo como coordinador entre las Clases.
+
+- Inyección de Dependencias (DIP): Aunque el código es simple, está separando la creación de instancias (Circulo) y la lógica de 
+presentación, facilitando la inyección de dependencias si fuera necesario en el futuro.
+
+- Escalabilidad y testabilidad: Este diseño es más fácil de escalar, ya que cada clase se puede modificar o probar individualmente.
