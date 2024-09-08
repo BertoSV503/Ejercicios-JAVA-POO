@@ -32,3 +32,38 @@ Para detalles específicos sobre cómo se aplican estos principios en las clases
 
    ```bash
    git clone https://github.com/BertoSV503/Ejercicios-JAVA-POO.git
+
+2. Navega a la carpeta del proyecto
+   
+    ```bash
+   cd Ejercicios-JAVA-POO
+
+3. Compila el proyecto
+
+   ```bash
+   javac -d bin src/sv/com/masbytes/poo/ejercicios/circulo/*.java
+
+4. Ejecuta el programa
+   
+   ```bash
+   java -cp bin sv.com.masbytes.poo.ejercicios.circulo.PruebaCirculo
+
+   (Reemplaza PruebaCirculo con la clase principal que desees ejecutar)
+
+## Contribuciones
+
+Si deseas contribuir al proyecto, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu feature o corrección (git checkout -b feature/nueva-funcionalidad).
+3. Realiza los cambios y haz commits (git commit -am 'Añadida nueva funcionalidad').
+4. Haz un push a la rama (git push origin feature/nueva-funcionalidad).
+5. Envía un pull request.
+
+## Documentación de Clases
+
+A medida que el proyecto crece, se añadirá documentación detallada para cada clase y ejercicio en esta sección. Revisa el código fuente para obtener la documentación más actualizada sobre las nuevas clases y funcionalidades.
+
+## Contacto
+
+Si tienes alguna pregunta o comentario sobre el proyecto, no dudes en contactar a Berto Rojas en rtorres.roberto@outlook.com.
