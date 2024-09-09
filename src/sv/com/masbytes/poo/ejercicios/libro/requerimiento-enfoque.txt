@@ -1,0 +1,54 @@
+**Ejercicio: Creando una Clase `Libro`**
+
+Supongamos que queremos modelar un objeto simple como un "Libro". Crearemos una clase llamada `Libro` con algunos atributos 
+básicos y métodos. Aquí tienes el enunciado:
+
+1. **Atributos:**
+   - `titulo` (de tipo `String`): Representa el título del libro.
+   - `autor` (de tipo `String`): Representa el autor del libro.
+   - `anioPublicacion` (de tipo `int`): Representa el año de publicación del libro.
+
+2. **Métodos:**
+   - `mostrarInformacion()`: Muestra por consola la información completa del libro (título, autor y año de publicación).
+
+Tu tarea es crear la clase `Libro` con los atributos y métodos mencionados. Luego, en tu programa principal, crea un objeto 
+`Libro`, establece sus atributos y muestra su información.
+-----
+
+Enfoque de la solucion:
+
+El enfoque utilizado en la solucion de este ejercicio está bien alineado con los principios SOLID y buenas prácticas.
+ 
+Análisis del enfoque aplicado en la solución:
+
+1. Single Responsibility Principle (SRP)
+- Libro: Esta clase sigue SRP ya que su única responsabilidad es representar un libro con sus atributos. No realiza ninguna tarea adicional 
+ni contiene lógica innecesaria.
+- Consola: Tiene una clara responsabilidad de manejar la entrada de datos. Cada método tiene una función específica (solicitar título, autor y año).
+- PruebaLibro: Es responsable de la interacción entre las clases y ejecutar el programa, cumpliendo con su rol de "clase de prueba".
+
+2. Open/Closed Principle (OCP)
+- Libro: El constructor permite inicializar los atributos, y la validación de los valores iniciales está encapsulada. Si se quisieras extender 
+o modificar la lógica de creación de libros (por ejemplo, validar otros campos), se podría hacer sin modificar la clase base.
+- Consola: Siguiendo OCP, se podrían añadir nuevos métodos de entrada o modificar la lógica sin afectar la interacción actual.
+
+3. Liskov Substitution Principle (LSP)
+Aunque no se está utilizando herencia en este ejercicio, es importante que las clases sigan siendo intercambiables en un futuro, si se decide 
+hacerlo. A medida que se vayan creando clases más avanzadas, hay que asegurarse de que cualquier clase hija pueda sustituir a la clase padre sin 
+alterar la funcionalidad esperada.
+
+4. Interface Segregation Principle (ISP)
+Este principio no aplica en este caso, ya que no se está trabajando con interfaces, pero es algo que se podría considerar en un futuro si se 
+decides desacoplar responsabilidades a través de interfaces.
+
+5. Dependency Inversion Principle (DIP)
+Aunque no hay inyecciones de dependencia explícitas, se han desacoplado adecuadamente las responsabilidades de las clases. La clase Consola 
+maneja la entrada, mientras que PruebaLibro coordina la interacción. Si más adelante se quisieran implementar interfaces para mejorar la flexi-
+bilidad, se podría introducir DIP.
+
+Buenas Prácticas y Convenciones
+Los nombres de clases y métodos son claros y siguen las convenciones de Java (camelCase y PascalCase).
+Los métodos de la clase Consola están bien formados y cumplen su propósito. Utilizar Scanner y controlar excepciones es una buena práctica para 
+garantizar entradas válidas.
+La ausencia de setters en la clase Libro es adecuada si los valores se configuran en el constructor y no se necesita cambiar después. Esto favorece 
+la inmutabilidad, lo cual es positivo en muchos casos.
