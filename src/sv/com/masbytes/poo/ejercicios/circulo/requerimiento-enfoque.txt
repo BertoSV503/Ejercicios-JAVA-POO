@@ -1,0 +1,27 @@
+**Ejercicio: Creando una Clase `Círculo`**
+
+Supongamos que deseamos modelar un círculo en Java. Crearemos una clase llamada `Círculo` con los siguientes atributos y métodos:
+
+1. **Atributos:**
+   - `radio` (de tipo `double`): Representa el radio del círculo.
+
+2. **Métodos:**
+   - `calcularArea()`: Calcula y devuelve el área del círculo (fórmula: área = π * radio^2).
+   - `calcularPerimetro()`: Calcula y devuelve el perímetro del círculo (fórmula: perímetro = 2 * π * radio).
+
+Tu tarea es crear la clase `Círculo` con los atributos y métodos mencionados. Luego, en tu programa principal, crea un objeto `Círculo` 
+con un radio específico y muestra su área y perímetro.
+
+Recuerda que la constante π (pi) se puede aproximar como `Math.PI` en Java.
+
+-----
+
+Enfoque de la Solucion:
+
+- Responsabilidad Única (SRP): Las clases tienen responsabilidades específicas: Circulo para la lógica de cálculo, Consola para la 
+entrada de datos, y PruebaCirculo como coordinador entre las Clases.
+
+- Inyección de Dependencias (DIP): Aunque el código es simple, está separando la creación de instancias (Circulo) y la lógica de 
+presentación, facilitando la inyección de dependencias si fuera necesario en el futuro.
+
+- Escalabilidad y testabilidad: Este diseño es más fácil de escalar, ya que cada clase se puede modificar o probar individualmente.
