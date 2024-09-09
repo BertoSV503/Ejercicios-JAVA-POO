@@ -1,0 +1,70 @@
+**Ejercicio: Creando una Clase `Estudiante`**
+
+Supongamos que deseamos modelar un objeto simple, como un "Estudiante". Crearemos una clase llamada `Estudiante` con los siguientes 
+atributos y métodos:
+
+1. **Atributos:**
+   - `nombres` (de tipo `String`): Representa los nombres del estudiante.
+   - `apellidos`(de tipo `String`). Representa los apellidos del estudiante.
+   - `edad` (de tipo `int`): Representa la edad del estudiante.
+   - `sexo` (de tipo `char`: Representa el sexo del estudiante. M o F
+   - `materias` (de tipo `String`: Representa LAS materias inscritas por el estudiante.
+
+2. **Métodos:**
+   - `mostrarInformacion()`: Muestra por consola toda la información completa del estudiante.
+
+La tarea es crear la clase `Estudiante` con los atributos y métodos mencionados. Luego, en el programa principal, crear un objeto `Estudiante`, 
+establecer sus atributos y mostrar su información.
+
+Recuerda aplicar buenas prácticas y convenciones.
+-----------
+
+El enfoque utilizado para resolver este ejercicio parece orientado hacia los principios de programación orientada a objetos (POO) y las buenas 
+prácticas, como la separación de responsabilidades y la validación de entrada.
+
+1. **Encapsulación**: Al utilizar clases como `Estudiante` y `Consola`, se está encapsulando los datos del estudiante y las operaciones relacionadas 
+con la interacción con el usuario, manteniendo las responsabilidades bien divididas.
+
+2. **Responsabilidad única (SOLID)**: Siguiendo el principio de responsabilidad única, cada clase tiene su propósito. `Estudiante` gestiona los datos 
+del estudiante, mientras que `Consola` maneja la entrada de datos.
+
+3. **Inmutabilidad controlada**: El uso de getters y setters, junto con la validación en el constructor, asegura que los valores asignados a los 
+atributos del estudiante sean válidos.
+
+4. **Legibilidad y modularidad**: El código es fácil de leer y seguir, con métodos bien definidos para las tareas específicas, lo que también facilita 
+la prueba y el mantenimiento.
+
+
+En general, el ejercicio sigue varios principios SOLID, pero hay aspectos en los que se podría mejorar para cumplir completamente con todos los 
+principios. Aquí hay un desglose según los principios SOLID:
+
+1. **Single Responsibility Principle (SRP)**:
+   - Cada clase tiene una única responsabilidad. `Estudiante` gestiona los datos del estudiante, y `Consola` maneja la entrada de datos.
+
+2. **Open/Closed Principle (OCP)**:
+   - El diseño actual no es fácilmente extensible sin modificar las clases existentes. Por ejemplo, si quisieras añadir nuevas validaciones o tipos 
+   de entrada en `Consola`, se tendría que modificar la clase. Hay que considerar si se pueden diseñar las clases para que sean más fáciles de 
+   extender sin cambiar el código existente.
+
+3. **Liskov Substitution Principle (LSP)**:
+   - No se está utilizando herencia en este ejercicio, pero si lo hiciera, cada subclase debería ser intercambiable con su superclase sin afectar 
+   la funcionalidad.
+
+4. **Interface Segregation Principle (ISP)**:
+   - No se han usado interfaces en este ejercicio, pero si lo hiciera, debería asegurar de que las interfaces sean específicas y que las clases 
+   implementen solo los métodos que realmente necesitan.
+
+5. **Dependency Inversion Principle (DIP)**:
+   - La clase `PruebaEstudiante` depende de `Consola` y `Estudiante` directamente. Para mejorar el cumplimiento del DIP, se podría usar interfaces 
+   para abstraer las dependencias, facilitando el cambio y la prueba de las clases.
+
+### Recomendaciones para mejorar el cumplimiento de SOLID:
+
+- **Modularización**: Considera dividir la lógica de entrada en `Consola` en más clases o métodos para hacer que el código sea más modular y más 
+fácil de extender sin modificar el existente.
+
+- **Interfaz para entrada de datos**: Se Podría definir una interfaz para la entrada de datos, permitiendo diferentes implementaciones, lo que haría 
+que el código sea más flexible y adherente al DIP.
+
+- **Prueba y Extensibilidad**: Diseña las clases de manera que sea fácil añadir nuevas funcionalidades sin modificar el código existente. Esto puede 
+incluir el uso de patrones de diseño como el patrón de estrategia para manejar diferentes tipos de entrada.
