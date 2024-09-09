@@ -7,6 +7,7 @@ public class Consola {
 
 	private static Scanner input = new Scanner(System.in);
 
+	//	Método para solicitar al usuario un valor decimal (en este caso, el radio)
 	public static double pideRadio(String mensaje) {
 		double radio = 0.0;
 		boolean radioValido = false;
@@ -21,7 +22,7 @@ public class Consola {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Digite un dato valido por favor!");
-				input.next(); // Limpiar el buffer
+				input.next(); //	Limpiar el buffer después de una excepción
 			}
 		}
 		return radio;
